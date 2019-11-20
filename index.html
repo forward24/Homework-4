@@ -8,9 +8,29 @@
 </head>
 
 <body>
-    <button>Start Quiz</button>
+    <button onclick="startquiz()">Start Quiz</button>
     <button>View High Scores</button>
+
+<script>
+
+    function startquiz(){
+        
+
+    function timer(){
+        var sec = 30;
+        var timer = setInterval(function(){
+            document.getElementById('safeTimerDisplay').innerHTML='00:'+sec;
+            sec--;
+            if (sec < 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+    timer();
+    }
     
+</script>
+
     
 </body>
 </html>
